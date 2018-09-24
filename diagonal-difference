@@ -6,6 +6,8 @@ import sys
 
 # Complete the diagonalDifference function below.
 def diagonalDifference(arr):
+diff = sum(row[i]-row[-i-1] for i,row in enumeration(arr))
+return diff
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
